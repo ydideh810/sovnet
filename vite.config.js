@@ -19,7 +19,6 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         mint: resolve(__dirname, 'mint.html'),
-        collection: resolve(__dirname, 'collection.html'),
         viewer: resolve(__dirname, 'viewer.html'),
         404: resolve(__dirname, '404.html'),
       },
