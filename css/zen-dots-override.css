@@ -1,0 +1,47 @@
+/* Zen Dots Font Override - Apply to all elements */
+* {
+  font-family: 'Zen Dots', cursive !important;
+}
+
+/* Specific overrides for elements that might have custom fonts */
+body,
+h1, h2, h3, h4, h5, h6,
+p, span, div, a, button,
+.text-1, .text-2, .text-3, .text-4, .text-5, .text-6, .text-7, .text-8, .text-9, .text-10, .text-11, .text-12, .text-13, .text-14, .text-15, .text-16, .text-17, .text-18, .text-19, .text-20, .text-21, .text-22, .text-23, .text-24, .text-25,
+.btn, .nav-link, .navbar-nav, .accordion-button,
+.form-control, .form-check-label,
+input, textarea, select,
+.social-icons,
+.footer,
+.preloader {
+  font-family: 'Zen Dots', cursive !important;
+}
+
+/* Override any samurai font references */
+[style*="font-family: samurai"] {
+  font-family: 'Zen Dots', cursive !important;
+}
+
+/* Adjust letter spacing for better readability with Zen Dots */
+body {
+  letter-spacing: 0.5px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 1px;
+}
+
+/* Adjust line height for better readability */
+p, .text-light, .text-white {
+  line-height: 1.8;
+}
+
+/* Button text adjustments */
+.btn {
+  letter-spacing: 0.8px;
+}
+
+/* Navigation adjustments */
+.nav-link {
+  letter-spacing: 0.6px;
+}
