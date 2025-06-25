@@ -16,10 +16,10 @@ const network = "mainnet";
 
 // Wallet Connect Metadata
 const wcMetadata = {
-  name: 'Cash-Ninjas',
+  name: 'Sovnet',
   description: 'CashTokens NFT Collection',
-  url: 'https://ninjas.cash/',
-  icons: ['https://ninjas.cash/images/logo.png']
+  url: 'https://sovnet.cash/',
+  icons: ['https://sovnet.cash/images/logo.png']
 };
 
 export { projectId, urlApiServer, tokenId, collectionSize, mintPriceSats, payoutAddress, numberOfThreads, network, wcMetadata };
