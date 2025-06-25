@@ -1,0 +1,327 @@
+/* Retro Tech Theme - Inspired by the attached design */
+
+/* Color Variables */
+:root {
+  --retro-red: #8B0000;
+  --retro-dark-red: #5C0000;
+  --retro-light-red: #A52A2A;
+  --retro-cream: #F5F5DC;
+  --retro-black: #1A1A1A;
+  --retro-green: #00FF00;
+  --retro-amber: #FFB000;
+  --retro-gray: #404040;
+}
+
+/* Global Overrides */
+body {
+  background: var(--retro-red) !important;
+  background-image: none !important;
+  color: var(--retro-cream) !important;
+  font-family: 'Zen Dots', monospace !important;
+  letter-spacing: 1px;
+}
+
+/* Header Styling */
+.primary-menu {
+  background: var(--retro-dark-red) !important;
+  border-bottom: 2px solid var(--retro-cream) !important;
+}
+
+.navbar-brand, .logo {
+  color: var(--retro-cream) !important;
+}
+
+.nav-link {
+  color: var(--retro-cream) !important;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  border: 1px solid transparent;
+  margin: 0 5px;
+  padding: 8px 12px !important;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background: var(--retro-cream) !important;
+  color: var(--retro-dark-red) !important;
+  border: 1px solid var(--retro-cream);
+}
+
+/* Main Content Areas */
+.hero-wrap {
+  background: linear-gradient(45deg, var(--retro-red), var(--retro-dark-red)) !important;
+  border: 2px solid var(--retro-cream);
+  margin: 20px;
+  position: relative;
+}
+
+.hero-wrap::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 1px solid var(--retro-cream);
+  pointer-events: none;
+}
+
+/* Section Styling */
+.section {
+  background: var(--retro-red);
+  border-top: 2px solid var(--retro-cream);
+  border-bottom: 2px solid var(--retro-cream);
+  margin: 20px 0;
+  padding: 40px 0;
+}
+
+/* Card/Panel Styling */
+.hero-content,
+.card,
+.bg-dark,
+.bg-dark-2 {
+  background: var(--retro-dark-red) !important;
+  border: 2px solid var(--retro-cream) !important;
+  color: var(--retro-cream) !important;
+}
+
+/* Button Styling */
+.btn {
+  background: var(--retro-cream) !important;
+  color: var(--retro-dark-red) !important;
+  border: 2px solid var(--retro-cream) !important;
+  font-family: 'Zen Dots', monospace !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  padding: 12px 24px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--retro-dark-red) !important;
+  color: var(--retro-cream) !important;
+  border: 2px solid var(--retro-cream) !important;
+  box-shadow: 0 0 10px var(--retro-cream);
+}
+
+.btn-primary {
+  background: var(--retro-green) !important;
+  color: var(--retro-black) !important;
+  border: 2px solid var(--retro-green) !important;
+}
+
+.btn-primary:hover {
+  background: var(--retro-black) !important;
+  color: var(--retro-green) !important;
+  border: 2px solid var(--retro-green) !important;
+  box-shadow: 0 0 10px var(--retro-green);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--retro-cream) !important;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 0px var(--retro-dark-red);
+}
+
+.text-primary {
+  color: var(--retro-green) !important;
+}
+
+.text-light,
+.text-white {
+  color: var(--retro-cream) !important;
+}
+
+/* Grid/Stats Boxes */
+.hero-mask {
+  background: var(--retro-dark-red) !important;
+  border: 1px solid var(--retro-cream) !important;
+}
+
+/* Retro Grid Pattern */
+.retro-grid {
+  background-image: 
+    linear-gradient(var(--retro-cream) 1px, transparent 1px),
+    linear-gradient(90deg, var(--retro-cream) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+/* Circuit Board Elements */
+.circuit-element {
+  position: relative;
+}
+
+.circuit-element::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: 
+    linear-gradient(90deg, var(--retro-cream) 1px, transparent 1px),
+    linear-gradient(var(--retro-cream) 1px, transparent 1px);
+  background-size: 10px 10px;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+/* Form Elements */
+.form-control {
+  background: var(--retro-dark-red) !important;
+  border: 2px solid var(--retro-cream) !important;
+  color: var(--retro-cream) !important;
+  font-family: 'Zen Dots', monospace !important;
+}
+
+.form-control:focus {
+  background: var(--retro-dark-red) !important;
+  border-color: var(--retro-green) !important;
+  box-shadow: 0 0 10px var(--retro-green);
+  color: var(--retro-cream) !important;
+}
+
+/* Accordion/FAQ Styling */
+.accordion-button {
+  background: var(--retro-dark-red) !important;
+  color: var(--retro-cream) !important;
+  border: 1px solid var(--retro-cream) !important;
+  font-family: 'Zen Dots', monospace !important;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.accordion-button:not(.collapsed) {
+  background: var(--retro-green) !important;
+  color: var(--retro-black) !important;
+}
+
+.accordion-body {
+  background: var(--retro-dark-red) !important;
+  color: var(--retro-cream) !important;
+  border: 1px solid var(--retro-cream) !important;
+  border-top: none;
+}
+
+/* Footer */
+#footer {
+  background: var(--retro-dark-red) !important;
+  border-top: 3px solid var(--retro-cream) !important;
+}
+
+/* Social Icons */
+.social-icons a {
+  background: var(--retro-cream) !important;
+  color: var(--retro-dark-red) !important;
+  border: 2px solid var(--retro-cream) !important;
+}
+
+.social-icons a:hover {
+  background: var(--retro-green) !important;
+  color: var(--retro-black) !important;
+  border: 2px solid var(--retro-green) !important;
+  box-shadow: 0 0 10px var(--retro-green);
+}
+
+/* Preloader */
+.preloader {
+  background: var(--retro-red) !important;
+}
+
+.lds-ellipsis div {
+  background: var(--retro-cream) !important;
+}
+
+/* Image Styling */
+img {
+  border: 2px solid var(--retro-cream);
+  filter: contrast(1.2) saturate(0.8);
+}
+
+/* Retro Terminal Effect */
+.terminal-text {
+  font-family: 'Zen Dots', monospace !important;
+  color: var(--retro-green);
+  background: var(--retro-black);
+  padding: 10px;
+  border: 2px solid var(--retro-green);
+  text-shadow: 0 0 5px var(--retro-green);
+}
+
+/* Glitch Effect for Headers */
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+.glitch-text {
+  animation: glitch 0.3s infinite;
+}
+
+/* Scanlines Effect */
+.scanlines::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    transparent 50%, 
+    rgba(245, 245, 220, 0.03) 50%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--retro-dark-red);
+  border: 1px solid var(--retro-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--retro-cream);
+  border: 1px solid var(--retro-dark-red);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--retro-green);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-wrap {
+    margin: 10px;
+  }
+  
+  .nav-link {
+    font-size: 10px;
+    padding: 6px 8px !important;
+  }
+  
+  .btn {
+    font-size: 10px;
+    padding: 8px 16px;
+  }
+}
