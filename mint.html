@@ -31,6 +31,8 @@
   <link id="color-switcher" type="text/css" rel="stylesheet" href="css/mint.css" />
   <!-- Zen Dots Font Override -->
   <link rel="stylesheet" type="text/css" href="css/zen-dots-override.css" />
+  <!-- Retro Tech Theme -->
+  <link rel="stylesheet" type="text/css" href="css/retro-tech-theme.css" />
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#header-nav" data-bs-smooth-scroll="true" data-bs-offset="0" class="hero-bg"
@@ -91,16 +93,20 @@
     <div id="content" role="main">
       <div class="section mt-5 pb-0">
         <div class="container pt-3">
+          <div class="terminal-text text-center mb-4">
+            > MINTING PROTOCOL ACTIVE<br>
+            > AWAITING USER INPUT...
+          </div>
           <div class="row g-5">
 
             <!-- mobile  -->
-            <h2 class="displayMobile text-8 text-white fw-600 oMarginMobile col-lg-6 text-center text-lg-start"
+            <h2 class="displayMobile text-8 text-white fw-600 oMarginMobile col-lg-6 text-center text-lg-start glitch-text"
               style="margin-top: 10px; margin-bottom: -25px;">
-              Sovnet Mint is <span class="bg-success rounded-4 px-3">Live</span>
+              SOVNET MINT <span class="bg-success rounded-4 px-3">ONLINE</span>
             </h2>
 
             <!-- Item Image -->
-            <div class="col-lg-6 text-center">
+            <div class="col-lg-6 text-center circuit-element">
               <img id="imageMint" class="img-fluid rounded-5" src="images/unknown.jpg" alt=""
                 style="max-width: 500px; width: 90%;">
               <div id="textImageMint" class="text-light text-5 mb-3"></div>
@@ -117,10 +123,15 @@
             <!-- Item Details  -->
             <div class="noMarginMobile col-lg-6 text-center text-lg-start">
               <!-- desktop  -->
-              <h1 class="hideMobile text-light text-5 mb-4">Public Mint</h1>
-              <h2 class="hideMobile text-10 text-white fw-600 mb-4">Sovnet Mint is <span
-                  class="bg-success rounded-4 px-3">Live</span></h2>
+              <h1 class="hideMobile text-light text-5 mb-4">PUBLIC ACCESS</h1>
+              <h2 class="hideMobile text-10 text-white fw-600 mb-4 glitch-text">SOVNET MINT <span
+                  class="bg-success rounded-4 px-3">ONLINE</span></h2>
               <div class="hideMobile">
+                <div class="terminal-text mb-3">
+                  > SYSTEM STATUS: OPERATIONAL<br>
+                  > SECURITY: ENABLED<br>
+                  > FEES: MINIMAL
+                </div>
                 <p class="text-white fw-500 mb-1"><span class="text-light fw-normal"></span> Provably Fair <span
                     class="d-inline-flex text-success bg-white rounded-circle"><i
                       class="fas fa-check-circle"></i></span></p>
@@ -135,31 +146,34 @@
               <!-- Price -->
               <div class="row justify-content-center justify-content-lg-start mb-4">
                 <div class="col-auto col-lg-4">
-                  <p class="text-light mb-0">Mint Price:</p>
+                  <p class="text-light mb-0">COST:</p>
                   <div class="text-7 text-white fw-600">0.05 BCH</div>
                 </div>
                 <div class="col-auto col-lg-4">
-                  <p class="text-light mb-0">Minted:</p>
+                  <p class="text-light mb-0">MINTED:</p>
                   <div class="text-7 text-white fw-600"> <span class="blink_me" id="nftsMinted"></span>/5000</div>
                 </div>
               </div>
 
               <!-- Wallet Connect info -->
               <div class="col-12 col-sm-auto text-light mb-4 mt-2" id="connectInfo">
-                You need a BCH wallet with WalletConnect support to mint Sovnet NFTs! <br><br>
-                Supporting wallets are <a href="https://cashonize.com/" target="_blank">Cashonize</a>,
+                <div class="terminal-text mb-3">
+                  > WALLET CONNECTION REQUIRED<br>
+                  > SUPPORTED PROTOCOLS: WALLETCONNECT V2
+                </div>
+                Compatible wallets: <a href="https://cashonize.com/" target="_blank">Cashonize</a>,
                 <a href="https://zapit.io/" target="_blank">Zapit</a> and <a href="https://www.paytaca.com/"
                   target="_blank">Paytaca</a>.
               </div>
 
               <!-- Wallet Connect Button -->
-              <div id="my-button" class="btn btn-light rounded-4">Connect Wallet</div>
+              <div id="my-button" class="btn btn-light rounded-4">ESTABLISH CONNECTION</div>
 
               <!-- Minting Section -->
               <div id="mintSection" style="display: none;">
                 <!-- Mint Quantity -->
                 <div class="row g-2 align-items-center justify-content-center justify-content-lg-start mb-3">
-                  <div class="col-12 col-sm-auto text-light"> Quantity (max 5): </div>
+                  <div class="col-12 col-sm-auto text-light"> QUANTITY (MAX 5): </div>
                   <div class="col-auto col-sm-4">
                     <div class="input-group form-dark">
                       <button type="button" class="input-group-text bg-transparent border-0 text-light text-5"
@@ -171,10 +185,14 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 col-sm-auto text-light mb-4"> * Each nft-mint needs individual approval </div>
+                <div class="col-12 col-sm-auto text-light mb-4"> 
+                  <div class="terminal-text">
+                    > EACH MINT REQUIRES APPROVAL
+                  </div>
+                </div>
                 <!-- Mint Button -->
                 <div class="d-grid">
-                  <div id="mintButton" class="btn btn-primary btn-lg rounded-pill">Mint Now</div>
+                  <div id="mintButton" class="btn btn-primary btn-lg rounded-pill">EXECUTE MINT</div>
                 </div>
               </div>
             </div>
