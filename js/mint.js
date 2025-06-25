@@ -266,7 +266,7 @@ async function mintNFT(mintIndex, mintTotal) {
       transaction: decodedTransaction,
       sourceOutputs: listSourceOutputs,
       broadcast: true,
-      userPrompt: "Mint Sovnet NFT"
+      userPrompt: "Buy Sovran Tokens"
     };
 
     console.log(wcTransactionObj);
