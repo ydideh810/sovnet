@@ -137,7 +137,7 @@ let nrsMinted = [];
 // Cleanup state when mint fails. Fix button,
 // and onclick callback.
 const cleanupFailedMint = () => {
-  mintButton.textContent = "Mint Now";
+  mintButton.textContent = "Buy Now";
   mintButton.onclick = createMintingTxs;
   updateAmountMinted();
 };
