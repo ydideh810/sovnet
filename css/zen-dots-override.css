@@ -14,12 +14,12 @@ input, textarea, select,
 .social-icons,
 .footer,
 .preloader {
-  font-family: 'Zen Dots', cursive !important;
+  font-family: 'Tektur', cursive !important;
 }
 
 /* Override any samurai font references */
 [style*="font-family: samurai"] {
-  font-family: 'Zen Dots', cursive !important;
+  font-family: 'Tektur', cursive !important;
 }
 
 /* Adjust letter spacing for better readability with Zen Dots */
