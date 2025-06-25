@@ -108,7 +108,7 @@ const contractParams = [
 ];
 
 // Create a custom 1-of-1 electrum cluster for bch-mainnet
-const electrumCluster = new ElectrumCluster('Cash-Ninjas', '1.5.1', 1, 1);
+const electrumCluster = new ElectrumCluster('Sovnet', '1.5.1', 1, 1);
 electrumCluster.addServer('fulcrum.greyh.at', ElectrumTransport.WSS.Port, ElectrumTransport.WSS.Scheme);
 const electrum = network == "mainnet" ? electrumCluster : undefined;
 // Initialise cashscript ElectrumNetworkProvider
@@ -266,11 +266,11 @@ async function mintNFT(mintIndex, mintTotal) {
       transaction: decodedTransaction,
       sourceOutputs: listSourceOutputs,
       broadcast: true,
-      userPrompt: "Mint Cash-Ninja NFT"
+      userPrompt: "Mint Sovnet NFT"
     };
 
     console.log(wcTransactionObj);
-    setTimeout(() => alert('Approve the minting transaction in Cashonize'), 100);
+    setTimeout(() => alert('Approve the minting transaction in your wallet'), 100);
     const signResult = await signTransaction(wcTransactionObj);
     console.log(signResult);
     if (signResult) {

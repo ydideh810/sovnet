@@ -1,6 +1,6 @@
-# Cash-Ninjas Minting Frontend
+# Sovnet Minting Frontend
 
-Repo for the [Cash-Ninjas](https://ninjas.cash) website - including wallet connect and minting logic.
+Repo for the [Sovnet](https://sovnet.cash) website - including wallet connect and minting logic.
 
 ## Overview
 
@@ -19,7 +19,7 @@ The Wallet Connect V2 standard for BCH is supported by [Cashonize](https://casho
 ## Installation
 
 ```sh
-git clone https://github.com/cashninjas/ninjas.cash
+git clone https://github.com/sovnet/sovnet.cash
 
 npm install
 ```

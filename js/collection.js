@@ -19,7 +19,7 @@ const attributeNames = ["Markings", "Weapons", "Backgrounds", "Eyes", "Colors1",
 const attributeKeys = ["Marking", "Weapon", "Background", "Eyes", "Primary Color", "Secondary Color", "Specials"];
 
 // Create a custom 1-of-1 electrum cluster for bch-mainnet
-const electrumCluster = new ElectrumCluster('Cash-Ninjas', '1.5.1', 1, 1);
+const electrumCluster = new ElectrumCluster('Sovnet', '1.5.1', 1, 1);
 electrumCluster.addServer('fulcrum.greyh.at', ElectrumTransport.WSS.Port, ElectrumTransport.WSS.Scheme);
 const electrum = network == "mainnet" ? electrumCluster : undefined;
 // Initialise cashscript ElectrumNetworkProvider
@@ -117,8 +117,8 @@ if (lastSession && !urlParamAddr && !displayFullCollection) setTimeout(async () 
 
 // If urlParam has address, load collection 
 if (urlParamAddr) setTimeout(async () => {
-  const listCashninjas = await getNinjasOnAddr(urlParamAddr);
-  updateCollection(listCashninjas);
+  const listSovnetNfts = await getNinjasOnAddr(urlParamAddr);
+  updateCollection(listSovnetNfts);
   displayNinjas();
 }, 500
 );
@@ -161,9 +161,9 @@ async function fetchUserNinjas() {
   if (!ninjasConnectedWallet.length) {
     const userAddress = await getUserAddress();
     connectedUserAddress = userAddress;
-    const listCashninjas = await getNinjasOnAddr(userAddress);
-    document.getElementById("myCollectionButton").textContent = `My Collection (${listCashninjas.length})`
-    ninjasConnectedWallet = listCashninjas;
+    const listSovnetNfts = await getNinjasOnAddr(userAddress);
+    document.getElementById("myCollectionButton").textContent = `My Collection (${listSovnetNfts.length})`
+    ninjasConnectedWallet = listSovnetNfts;
   }
   window.history.replaceState({}, "", `${location.pathname}?addr=${connectedUserAddress}`);
   updateCollection(ninjasConnectedWallet);
@@ -172,14 +172,14 @@ async function fetchUserNinjas() {
 
 async function getNinjasOnAddr(address) {
   const userUtxos = await electrumServer.getUtxos(address);
-  const cashNinjaUtxos = userUtxos.filter(val => val?.token?.category == tokenId);
-  const listCashninjas = [];
-  cashNinjaUtxos.forEach(ninjaUtxo => {
+  const sovnetUtxos = userUtxos.filter(val => val?.token?.category == tokenId);
+  const listSovnetNfts = [];
+  sovnetUtxos.forEach(ninjaUtxo => {
     const ninjaCommitment = ninjaUtxo.token.nft.commitment;
     const ninjaNumber = vmNumberToBigInt(hexToBin(ninjaCommitment)) + 1n;
-    listCashninjas.push(Number(ninjaNumber));
+    listSovnetNfts.push(Number(ninjaNumber));
   });
-  return listCashninjas;
+  return listSovnetNfts;
 }
 
 async function displayNinjas(offset = 0) {
@@ -202,7 +202,7 @@ async function displayNinjas(offset = 0) {
     ninjaList.appendChild(noNinjasTemplate);
     Placeholder.replaceWith(ninjaList);
   } else {
-    // Render list of cashninjas
+    // Render list of sovnet nfts
     const template = document.getElementById("ninja-template");
     slicedArray.forEach(ninjaNumber => {
       const ninjaTemplate = document.importNode(template.content, true);
